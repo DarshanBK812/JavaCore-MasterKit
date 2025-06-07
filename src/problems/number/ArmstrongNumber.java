@@ -1,5 +1,7 @@
 package problems.number;
 
+import java.util.Scanner;
+
 //153: 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153 (Armstrong number) 
 //370: 3^3 + 7^3 + 0^3 = 27 + 343 + 0 = 370 (Armstrong number) 
 
@@ -14,7 +16,9 @@ public class ArmstrongNumber {
 	}
 
 	public static void main(String[] args) {
-		int num = 370;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = scan.nextInt();
 		int num2 = num;
 		double sum = 0;
 		int count = count(num);
