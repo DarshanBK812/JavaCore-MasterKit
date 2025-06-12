@@ -2,7 +2,7 @@ package problems.pattren;
 
 import java.util.Iterator;
 
-public class Diamond {
+public class Full_HourGlass {
 	
 	public static void main(String[] args) {
 		int row = 7 , val =4 , space = 0 ;

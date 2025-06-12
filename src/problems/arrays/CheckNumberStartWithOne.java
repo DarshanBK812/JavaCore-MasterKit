@@ -11,7 +11,7 @@ public class CheckNumberStartWithOne {
 		List<Integer> list = new ArrayList<Integer>();
 		for (int i : arr) {
 			int check = i;
-			while (check > 10) {
+			while (check >= 10) {
 				check = check / 10;
 			}
 			if (check == 1)

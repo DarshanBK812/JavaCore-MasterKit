@@ -14,9 +14,9 @@ public class NonReapeatedElement {
 		for (int i : arr) {
 			hashMap.put(i, hashMap.getOrDefault(i, 0) + 1);
 		}
-		
-		for(int i : arr) {
-			if(hashMap.get(i) == 1) {
+
+		for (int i : arr) {
+			if (hashMap.get(i) == 1) {
 				System.out.println(i);
 			}
 		}
@@ -42,18 +42,18 @@ public class NonReapeatedElement {
 		int arr[] = { 1, 2, 3, 1, 2, 4, 5 };
 		find3(arr);
 	}
-	
-	public static void find3(int arr []) {
+
+	public static void find3(int arr[]) {
 		Arrays.sort(arr);
 //		int j = 0;
-		for(int i = 0 ; i<arr.length ; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			int count = 0;
-			for(int j = 0 ; j<  arr.length  ; j++) {
-				if(arr[j] == arr[i]) {
+			for (int j = 0; j < arr.length; j++) {
+				if (arr[j] == arr[i]) {
 					count++;
 				}
 			}
-			if(count == 1) {
+			if (count == 1) {
 				System.out.println(arr[i]);
 			}
 		}
