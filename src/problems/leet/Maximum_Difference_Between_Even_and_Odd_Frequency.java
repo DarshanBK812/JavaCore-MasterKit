@@ -20,23 +20,23 @@ public class Maximum_Difference_Between_Even_and_Odd_Frequency {
 
 		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
 			int val = entry.getValue();
-			
+
 //			System.out.println(val < );
-			
+
 			System.out.println(val);
 			if (val > oddFre && val % 2 != 0) {
 				oddFre = val;
 //				System.out.println(oddFre);
 
-			} else if (val  > evenFre &&   val % 2 == 0) {
+			} else if (val > evenFre && val % 2 == 0) {
 //				System.out.println(val % 2 == 0);
 				int evenFre1 = val;
-				if(evenFre != 0) {
+				if (evenFre > 0) {
 					evenFre = Math.min(evenFre, evenFre1);
 					continue;
 				}
 				evenFre = evenFre1;
-				
+
 //				
 //				break;
 			}
@@ -44,11 +44,10 @@ public class Maximum_Difference_Between_Even_and_Odd_Frequency {
 		System.out.println("evenFre " + evenFre);
 		System.out.println("oddFre " + oddFre);
 
-
 //		if (evenFre > oddFre)
 //			System.out.println(evenFre - oddFre);
 //		else
-			System.out.println(oddFre - evenFre);
+		System.out.println(oddFre - evenFre);
 
 	}
 
