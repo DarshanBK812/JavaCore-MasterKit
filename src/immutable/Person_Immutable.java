@@ -1,5 +1,6 @@
 package immutable;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -32,7 +33,7 @@ public final class Person_Immutable {
 	public boolean equals(Object object) {
 		if (this == object)
 			return true;
-		else if (object == null || getClass() != object.getClass())
+		else if (object == null || this.getClass() != object.getClass())
 			return false;
 
 		Person_Immutable immutable = (Person_Immutable) object;
@@ -44,17 +45,29 @@ public final class Person_Immutable {
 	}
 
 	public static void main(String[] args) {
-//		Person_Immutable person_Immutable = new Person_Immutable("darshan", 2);
-//		Person_Immutable person_Immutable2 = new Person_Immutable("darshan", 2);
 
-//		System.out.println(person_Immutable.equals(person_Immutable2));
+		String str = "chandu";
+		String str2 = "chandu";
+		System.out.println(str.equals(str2));
+
+		Person_Immutable person_Immutable = new Person_Immutable("darshan", 2);
+		Person_Immutable person_Immutable2 = new Person_Immutable("darshan", 2);
+
+		System.out.println(person_Immutable.equals(person_Immutable2));
+
+//		person_Immutable.name = "chandu";
+
+		System.out.println(person_Immutable.equals(person_Immutable2));
+
 //		System.out.println(person_Immutable.getName());
 //		System.out.println(person_Immutable2.getName());
 
-		Set<Person_Immutable> people = new HashSet<>();
-		people.add(new Person_Immutable("Darshan", 23));
-		people.add(new Person_Immutable("Darshan", 23));
-		System.out.println(people.size()); // ❌ 2 if not overridden, ✅ 1 if overridden
+//		Set<Person_Immutable> people = new HashSet<>();
+//		people.add(new Person_Immutable("Darshan", 23));
+//		people.add(new Person_Immutable("Darshan", 23));
+//		System.out.println(people.size());
+
+		ArrayList<String> arrayList = new ArrayList<String>();
 
 //		person_Immutable.name = "cat";
 	}

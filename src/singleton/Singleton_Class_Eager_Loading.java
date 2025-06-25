@@ -10,6 +10,7 @@ public class Singleton_Class_Eager_Loading {
 
 	// The object will be created during the class loading bcz of static we dont
 	// need this
+	
 	private final static Singleton_Class_Eager_Loading singletonObj = new Singleton_Class_Eager_Loading();
 
 	private Singleton_Class_Eager_Loading() {
