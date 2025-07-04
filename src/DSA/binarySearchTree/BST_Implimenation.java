@@ -35,6 +35,18 @@ public class BST_Implimenation {
 		}
 	}
 
+	public boolean search(int key) {
+		return searchRec(root, key);
+	}
+
+	public boolean searchRec(Node root, int key) {
+		if (root == null)
+			return false;
+		if (root.data == key)
+			return true;
+		return key < root.data ? searchRec(root.left, key) : searchRec(root.right, key);
+	}
+
 	public static void main(String[] args) {
 		BST_Implimenation bst = new BST_Implimenation();
 
@@ -47,6 +59,9 @@ public class BST_Implimenation {
 		bst.insert(80);
 
 		bst.inorder();
+
+		System.out.println();
+		System.out.println(bst.search(70));
 	}
 
 }

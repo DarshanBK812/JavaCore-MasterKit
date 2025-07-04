@@ -31,7 +31,7 @@ public class P15 {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = { 3, -2, 4, -3, 2, -1 };
+		int arr[] = { 2, -2, 4, -3, 1, -1 };
 
 		find(arr);
 		Set<Integer> set = new LinkedHashSet<Integer>();

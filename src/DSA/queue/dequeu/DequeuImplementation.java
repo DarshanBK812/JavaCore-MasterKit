@@ -48,6 +48,7 @@ public class DequeuImplementation {
 		dequeuImplementation.inserFront(1);
 		dequeuImplementation.display();
 		dequeuImplementation.insertRear(5);
+		dequeuImplementation.inserFront(123);
 		dequeuImplementation.display();
 	}
 
