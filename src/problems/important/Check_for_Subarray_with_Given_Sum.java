@@ -12,7 +12,8 @@ import java.util.HashMap;
 
 public class Check_for_Subarray_with_Given_Sum {
 
-	public static int[] find(int arr[], int targget) {
+	//Using HashMap
+	public static int[] find(int arr[], int target) {
 		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
 		for (int i = 0; i < arr.length; i++) {
 			int pair = targget - arr[i];
@@ -25,6 +26,18 @@ public class Check_for_Subarray_with_Given_Sum {
 		return new int[] { -1 };
 	}
 
+	//Using a Set
+	public static int[] find2(int arr[], int target){
+	Set<Integer> set = new HashSet<>();
+		for(int i = 0; i < arr.length; i++){
+			int pair = target - arr[i];
+			if(set.contains(pair)){
+				return new int[] {pair , arr[i]};
+			}
+			set.add(arr[i]);
+		}
+		return new int[] { -1 };
+	}
 	public static void main(String[] args) {
 		int arr[] = { 15, 2, 4, 8, 9, 5, 10, 23 };
 		int target = 230;
