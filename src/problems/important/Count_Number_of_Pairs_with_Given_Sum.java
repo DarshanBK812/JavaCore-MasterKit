@@ -39,6 +39,7 @@ public class Count_Number_of_Pairs_with_Given_Sum {
 		int sum = 6;
 		
 		int count = 0;
+		//using a map and time and space complexity O(N)
 		HashMap<Integer, Integer>  hashMap = new HashMap<Integer, Integer>();
 		for(int i : arr) {
 			int pair = sum - i;
