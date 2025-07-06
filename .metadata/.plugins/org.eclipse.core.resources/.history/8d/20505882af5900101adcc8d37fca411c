@@ -1,0 +1,13 @@
+package oop_Design_Oriented_Scenarios.banking_system;
+
+public class BankService {
+
+	public static void main(String[] args) {
+
+		Bank bank = new Account(1, "SbI", "saving", 10, 1, "darshan");
+		Bank bank2 = new Account(2, "Canara", "saving", 20, 2, "Chandu");
+		
+		bank2.createAccount();
+	}
+
+}

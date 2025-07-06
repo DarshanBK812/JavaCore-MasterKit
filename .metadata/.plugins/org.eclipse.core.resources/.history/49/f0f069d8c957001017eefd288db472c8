@@ -1,0 +1,15 @@
+package problems.DSA;
+
+//> Return true if two strings are anagrams, else false.
+//📥 Input: "listen", "silent" → 📤 Output: true
+
+
+public class CheckForAnagram {
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

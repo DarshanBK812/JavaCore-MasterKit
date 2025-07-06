@@ -1,0 +1,47 @@
+package oop_Design_Oriented_Scenarios;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class LibraryService extends Library {
+
+	public LibraryService(List<Book> books, List<User> users) {
+		super(books, users);
+	}
+
+	HashMap<User, Integer> map = new HashMap<>();
+
+	@Override
+	public void barrowBook(User user, Book book) {
+		
+		map.put(user, map.getOrDefault(user, 0)+1);
+		if(map.containsKey(user)) {
+			if(map.get(user) > 3) {
+				System.out.println("Cannot barrow ");
+				return;
+			}
+		}
+		System.out.println(user.getUserName() + " barrowred a " + book.getBookTitle() + " book");
+		
+	}
+
+	@Override
+	public void returnBook(User user, Book book) {
+		System.out.println(user.getUserName() + " returned a " + book.getBookTitle() + " book");
+	}
+
+	public static void main(String[] args) {
+		List<User> users = new ArrayList<User>();
+		users.add(new User(1, "Darshan"));
+		users.add(new User(2, "Chandu"));
+		List<Book> books = new ArrayList<Book>();
+		books.add(new Book(1, "ramayana"));
+		books.add(new Book(2, "Mahabaratha"));
+		Library library = new LibraryService(books, users);
+		library.barrowBook(library.getUsers().get(0), library.getBooks().get(1));
+		System.out.println();
+	}
+
+}

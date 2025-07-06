@@ -1,0 +1,11 @@
+package problems.DSA;
+
+//7. Find the Second Largest Element
+//
+//> Return the second largest number in the array.
+//📥 Input: [10, 5, 20, 8] → 📤 Output: 10
+
+
+public class SecondLargestElement {
+
+}

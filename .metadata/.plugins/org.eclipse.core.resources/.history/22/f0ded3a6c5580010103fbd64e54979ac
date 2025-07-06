@@ -1,0 +1,16 @@
+package problems.DSA.stack;
+
+import java.util.Stack;
+
+public class Find_Nearest_Largest_right_Number {
+
+	public static void main(String[] args) {
+		int arr[] = { 3, 7, 4, 15, 9 };
+
+		int temp[] = new int[arr.length];
+
+		Stack<Integer> stack = new Stack<Integer>();
+
+	}
+
+}
