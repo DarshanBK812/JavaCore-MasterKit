@@ -13,34 +13,28 @@ package problems.string;
 public class CountTheVowels_Consonents_Number_SpecialCharacter {
 
 	public static void count(String str) {
-		char ch[] = str.toCharArray();
+		char ch[] = str.toLowerCase().toCharArray();
 		int vowel = 0, consonants = 0, special = 0, digits = 0;
 		char c1 = 'a', c2 = 'z';
 		for (int i = 0; i < ch.length; i++) {
-			char c = Character.toLowerCase(ch[i]);
-
-			System.out.println("char 1 : " + c + " :" + Character.isLetterOrDigit(c));
-			if (Character.isLetterOrDigit(c)) {
-
-				System.out.println("char 2 : " + c + " :" + Character.isAlphabetic(c));
-				System.out.println();
-
-				if (Character.isAlphabetic(ch[i])) {
-					if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+			
+			char c = ch[i];
+			if(Character.isAlphabetic(c)){
+				if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
 						vowel++;
 					} else {
 						consonants++;
 					}
-				} else {
-					digits++;
-				}
+			} else if(Character.isDigit(c)) {
+				
+				digits++;
+				
 			} else {
-				if (c == ' ')
-					continue;
-				special++;
+				if(c != ' ') 
+					special++;
 			}
+			
 		}
-
 		System.out.println("Vowels " + vowel + " Consonants " + consonants + " Digits " + digits
 				+ " Special Characters " + special);
 	}
