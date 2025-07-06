@@ -2,6 +2,16 @@ package problems.important;
 
 public class MissingNumber {
 
+	public static void find(int arr []) {
+		Arrays.sort(arr);
+		for (int i = 1; i < arr.length; i++) {
+			if(arr[i] - arr[i-1] != 1) {
+				System.out.println((arr[i] + arr[i-1])/2);
+			}
+		}
+	}
+
+
 	public static void main(String[] args) {
 		
 		//Array should be in the natural order
