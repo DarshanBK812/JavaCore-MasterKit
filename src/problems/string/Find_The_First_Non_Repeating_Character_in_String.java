@@ -10,16 +10,14 @@ public class Find_The_First_Non_Repeating_Character_in_String {
 		for (char c : str.toCharArray()) {
 			hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
 		}
-		boolean flag = false;
+		
 		for (Map.Entry<Character, Integer> entry : hashMap.entrySet()) {
 			if (entry.getValue() == 1) {
 				System.out.println(entry.getKey());
-				break;
-			} else {
-				flag = true;
-			}
+				return;
+			} 
 		}
-		if(flag) System.out.println(" ");
+		 System.out.println(" ");
 
 	}
 
