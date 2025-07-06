@@ -5,25 +5,44 @@ import java.util.Map;
 
 public class Find_The_First_Non_Repeating_Character_in_String {
 
-	public static void find(String str) {
-		LinkedHashMap<Character, Integer> hashMap = new LinkedHashMap<Character, Integer>();
-		for (char c : str.toCharArray()) {
-			hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
+	
+	public static void remove(String str) {
+
+		char ch[] = str.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			int count = 0;
+			for (int j = 0; j < ch.length; j++) {
+				if (ch[i] == ch[j]) {
+					count++;
+				}
+			}
+			if (count <= 1)
+				System.out.println(ch[i]);
 		}
-		
-		for (Map.Entry<Character, Integer> entry : hashMap.entrySet()) {
-			if (entry.getValue() == 1) {
-				System.out.println(entry.getKey());
-				return;
-			} 
-		}
-		 System.out.println(" ");
 
 	}
 
 	public static void main(String[] args) {
-		String str = "aabbcc";
-		find(str);
+		String str = "darshan";
+		remove(str);
+		LinkedHashSet<Character> linkedHashSet = new LinkedHashSet<Character>();
+		for (char ch : str.toCharArray()) {
+			linkedHashSet.add(ch);
+		}
+
+//		System.out.println(linkedHashSet);
+		StringBuilder stringBuilder = new StringBuilder();
+//		for (char ch : linkedHashSet) {
+//			stringBuilder.append(ch);
+//		}
+//		Iterator<Character> iterator = linkedHashSet.iterator();
+//		while (iterator.hasNext()) {
+//			stringBuilder.append(iterator.next());
+//		}
+		for(char ch : linkedHashSet) {
+			stringBuilder.append(ch);
+		}
+		System.out.println(stringBuilder);
 	}
 
 }
