@@ -1,0 +1,10 @@
+package problems.DSA;
+
+
+//Return the first character that appears only once in a string.
+//📥 Input: "aabbccddeefo" → 📤 Output: f
+
+
+public class First_Non_Repeating_Character_in_a_String {
+
+}

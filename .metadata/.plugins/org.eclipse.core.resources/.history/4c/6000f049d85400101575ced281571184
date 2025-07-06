@@ -1,0 +1,21 @@
+package DSA.binarySearchTree;
+
+public class BST_Implimenation {
+
+	Node root;
+
+	public void insert(int data) {
+		root = insertRec(root, data);
+	}
+
+	public Node insertRec(Node root, int data) {
+		if (root == null) {
+			return new Node(data);
+		} 
+		if(data < root.data) {
+			root.
+		}
+		
+	}
+
+}

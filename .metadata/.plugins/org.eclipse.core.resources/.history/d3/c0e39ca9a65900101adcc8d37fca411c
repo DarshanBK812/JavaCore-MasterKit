@@ -1,0 +1,21 @@
+package oop_Design_Oriented_Scenarios;
+
+import java.util.List;
+
+public class LibraryService extends Library {
+
+	public LibraryService(List<Book> books) {
+		super(books);
+	}
+
+	@Override
+	public void barrowBook(User user, Book book) {
+		System.out.println(user.getUserName() + " barrowred a " + book.getBookTitle() + " book");
+	}
+
+	@Override
+	public void returnBook(User user, Book book) {
+		System.out.println(user.getUserName() + " returned a " + book.getBookTitle() + " book");
+	}
+
+}

@@ -1,0 +1,16 @@
+package problems.DSA;
+
+
+//✅ 10. Find the Longest Word in a Sentence
+//
+//> Return the word with the maximum length from a given string.
+//📥 Input: "Java is super powerful" → 📤 Output: "powerful"
+
+
+public class LongestWordInSentence {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

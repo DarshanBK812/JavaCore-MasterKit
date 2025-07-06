@@ -1,0 +1,11 @@
+package oop_Design_Oriented_Scenarios.banking_system;
+
+public class Account extends Bank {
+	
+	private int accountId;
+	private String accountHolderName;
+	private int aacountBal;
+	
+	
+
+}

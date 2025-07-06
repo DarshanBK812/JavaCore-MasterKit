@@ -2,6 +2,10 @@ package problems.important;
 
 import java.util.Arrays;
 
+// Input: s1 = “geeks”  s2 = “kseeg”
+// Output: true
+// Explanation: Both the string have same characters with same frequency. So, they are anagrams.
+
 public class Anagram_Check {
 
 	public static boolean check(String str1, String str2) {
@@ -9,18 +13,13 @@ public class Anagram_Check {
 		if (str1.length() != str2.length())
 			return false;
 
-		char ch1[] = str1.toCharArray();
-		char ch2[] = str2.toCharArray();
+		char ch1[] = str1.toCharArray().toCharArray();
+		char ch2[] = str2.toCharArray().toCharArray();
 
 		Arrays.sort(ch1);
 		Arrays.sort(ch2);
 
-		for (int i = 0; i < ch2.length; i++) {
-			if (ch1[i] != ch2[i])
-				return false;
-		}
-
-		return true;
+		return Arrays.equals(ch1 , ch2);
 	}
 
 	public static void main(String[] args) {

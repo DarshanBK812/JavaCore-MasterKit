@@ -1,0 +1,9 @@
+package problems.DSA;
+
+//Print all elements which are greater than all elements to their right.
+//📥 Input: [16, 17, 4, 3, 5, 2] → 📤 Output: [17, 5, 2]
+
+
+public class Leaders_In_An_Array {
+
+}

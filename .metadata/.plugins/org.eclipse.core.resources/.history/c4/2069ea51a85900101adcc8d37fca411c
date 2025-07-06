@@ -1,0 +1,34 @@
+package oop_Design_Oriented_Scenarios;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LibraryService extends Library {
+
+	public LibraryService(List<Book> books, List<User> users) {
+		super(books, users);
+	}
+
+	@Override
+	public void barrowBook(User user, Book book) {
+		System.out.println(user.getUserName() + " barrowred a " + book.getBookTitle() + " book");
+	}
+
+	@Override
+	public void returnBook(User user, Book book) {
+		System.out.println(user.getUserName() + " returned a " + book.getBookTitle() + " book");
+	}
+
+	public static void main(String[] args) {
+		List<User> users = new ArrayList<User>();
+		users.add(new User(1, "Darshan"));
+		users.add(new User(2, "Chandu"));
+		List<Book> books = new ArrayList<Book>();
+		books.add(new Book(1, "ramayana"));
+		books.add(new Book(2, "Mahabaratha"));
+		Library library = new LibraryService(books, users);
+		library.barrowBook(library.getUsers().get(1), library.getBooks().get(1));
+		System.out.println();
+	}
+
+}

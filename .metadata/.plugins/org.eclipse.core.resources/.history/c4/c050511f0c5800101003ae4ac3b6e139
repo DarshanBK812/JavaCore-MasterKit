@@ -1,0 +1,26 @@
+package problems.DSA;
+
+//Print all elements which are greater than all elements to their right.
+
+//📥 Input: [16, 17, 4, 3, 5, 2] → 📤 Output: [17, 5, 2]
+
+public class Leaders_In_An_Array {
+
+	public static void leaders(int arr[]) {
+		int max = 0;
+		for (int i = 1; i < arr.length; i++) {
+			
+			if (i-1 < i)
+				System.out.println(i);
+			
+		}
+	}
+
+	public static void main(String[] args) {
+
+		int arr[] = { 16, 17, 4, 3, 5, 2 };
+		leaders(arr);
+
+	}
+
+}

@@ -1,0 +1,37 @@
+package library;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.OptionalDouble;
+
+public class Library {
+
+	public static void main(String[] args) {
+		List<Book> books = new ArrayList<Book>();
+		books.add(new Book(1, "Ramayana", "valmiki", "Navel", 1892));
+		books.add(new Book(2, "Mahabharata", "V2", "Navel", 1923));
+		books.add(new Book(3, "C", "V3", "Navel3", 1924));
+		books.add(new Book(4, "D", "V4", "Navel4", 1925));
+
+		// Find the Number of Books
+		long totalBooks = books.stream().count();
+		System.out.println("Number of Books : " + totalBooks);
+		// or
+		System.out.println("Number of Books : " + books.size());
+
+		// Calculate avarage publictaion year of all book
+		OptionalDouble optionalDouble = books.stream().mapToInt(Book::getPublicationYear).average();
+
+		System.out.println("Avarage publication year : " + optionalDouble);
+		ListIterator<Book> iterator = books.listIterator();
+		int sum = 0;
+		while (iterator.hasNext()) {
+			sum += iterator.next().getPublicationYear();
+		}
+		System.out.println("avarage publictaion year :" + sum / books.size());
+	}
+
+}

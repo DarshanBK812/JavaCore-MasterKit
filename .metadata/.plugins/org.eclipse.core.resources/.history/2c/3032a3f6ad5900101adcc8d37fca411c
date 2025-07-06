@@ -1,0 +1,41 @@
+package oop_Design_Oriented_Scenarios.banking_system;
+
+public class Account extends Bank {
+
+	private int accountId;
+	private String accountHolderName;
+	private int aacountBal;
+
+	public Account(int bankId, String bankName, String accountType, int accountId, String accountHolderName,
+			int aacountBal) {
+		super(bankId, bankName, accountType);
+		this.accountId = accountId;
+		this.accountHolderName = accountHolderName;
+		this.aacountBal = aacountBal;
+	}
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
+
+	public String getAccountHolderName() {
+		return accountHolderName;
+	}
+
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
+	}
+
+	public int getAacountBal() {
+		return aacountBal;
+	}
+
+	public void setAacountBal(int aacountBal) {
+		this.aacountBal = aacountBal;
+	}
+
+}

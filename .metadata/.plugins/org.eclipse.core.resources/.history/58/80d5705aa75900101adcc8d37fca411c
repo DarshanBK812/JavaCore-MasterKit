@@ -1,0 +1,18 @@
+package oop_Design_Oriented_Scenarios;
+
+import java.util.List;
+
+public abstract class Library {
+
+	List<Book> books;
+
+	public Library(List<Book> books) {
+		super();
+		this.books = books;
+	}
+
+	public abstract void barrowBook(User user, Book book);
+
+	public abstract void returnBook(User user, Book book);
+
+}
