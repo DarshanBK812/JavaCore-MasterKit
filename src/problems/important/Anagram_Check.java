@@ -13,8 +13,8 @@ public class Anagram_Check {
 		if (str1.length() != str2.length())
 			return false;
 
-		char ch1[] = str1.toCharArray().toCharArray();
-		char ch2[] = str2.toCharArray().toCharArray();
+		char ch1[] = str1.toLowerCase().toCharArray();
+		char ch2[] = str2.toLowerCase().toCharArray();
 
 		Arrays.sort(ch1);
 		Arrays.sort(ch2);

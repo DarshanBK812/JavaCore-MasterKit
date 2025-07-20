@@ -1,23 +1,25 @@
 package problems.important;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Count_Number_of_Pairs_with_Given_Sum {
 
 	//using a set and time and space complexity O(N)
 	public void findPairs(int arr [] , int sum){
-		Set<Integer>() set = new HashSet<>();
+		Set<Integer> set = new HashSet<>();
 		for(int i : arr){
 			int pair = sum - i;
 			if(set.contains(pair)){
-				Syste.out.println(i);
+				System.out.println(i);
 			}
 			set.add(i);
 		}
 	}
 
 	//Without using collection time and space complexity O(N^2) 
-	 public static void main(String[] args) {
+	 public static void find() {
   
 		int[] arr = { 1, 5, 7, -1 };
 		int sum = 6;

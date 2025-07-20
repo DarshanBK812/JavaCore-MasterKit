@@ -39,13 +39,15 @@ public class LibraryService extends Library {
 		List<User> users = new ArrayList<User>();
 		users.add(new User(1, "Darshan"));
 		users.add(new User(2, "Chandu"));
+		
 		List<Book> books = new ArrayList<Book>();
 		books.add(new Book(1, "ramayana"));
 		books.add(new Book(2, "Mahabaratha"));
 		books.add(new Book(3, "C"));
 		books.add(new Book(4, "d"));
+		
 		Library library = new LibraryService(books, users);
-		library.barrowBook(library.getUsers().get(0), library.getBooks().get(4));
+		library.barrowBook(library.getUsers().get(0), library.getBooks().get(1));
 		System.out.println();
 	}
 

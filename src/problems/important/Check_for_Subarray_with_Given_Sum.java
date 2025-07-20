@@ -2,6 +2,8 @@ package problems.important;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 //Subarray with Given Sum :
 
@@ -16,7 +18,7 @@ public class Check_for_Subarray_with_Given_Sum {
 	public static int[] find(int arr[], int target) {
 		HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
 		for (int i = 0; i < arr.length; i++) {
-			int pair = targget - arr[i];
+			int pair = target - arr[i];
 			if (hashMap.containsKey(pair)) {
 				return new int[] { hashMap.get(pair), i };
 			}
