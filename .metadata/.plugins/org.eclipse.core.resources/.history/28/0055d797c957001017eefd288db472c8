@@ -1,9 +1,0 @@
-package problems.DSA;
-
-public class CheckForAnagram {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}
